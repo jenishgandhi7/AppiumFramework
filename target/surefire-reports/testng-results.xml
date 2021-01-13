@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="217922" started-at="2021-01-13T14:13:06 CST" finished-at="2021-01-13T14:16:44 CST">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="217922" started-at="2021-01-13T14:13:06 CST" finished-at="2021-01-13T14:16:44 CST">
+      <class name="Practies.AppiumFramework.ApiDemoAppTestCase">
+        <test-method status="PASS" signature="APIDemoTC()[pri:0, instance:Practies.AppiumFramework.ApiDemoAppTestCase@11438d26]" name="APIDemoTC" duration-ms="49656" started-at="2021-01-13T14:15:40 CST" finished-at="2021-01-13T14:16:29 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- APIDemoTC -->
+        <test-method status="PASS" signature="Preference_dependencies(java.lang.String)[pri:0, instance:Practies.AppiumFramework.ApiDemoAppTestCase@11438d26]" name="Preference_dependencies" duration-ms="7771" started-at="2021-01-13T14:16:29 CST" data-provider="input" depends-on-methods="Practies.AppiumFramework.ApiDemoAppTestCase.APIDemoTC" finished-at="2021-01-13T14:16:37 CST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[hello]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Preference_dependencies -->
+        <test-method status="PASS" signature="Preference_dependencies(java.lang.String)[pri:0, instance:Practies.AppiumFramework.ApiDemoAppTestCase@11438d26]" name="Preference_dependencies" duration-ms="6885" started-at="2021-01-13T14:16:37 CST" data-provider="input" depends-on-methods="Practies.AppiumFramework.ApiDemoAppTestCase.APIDemoTC" finished-at="2021-01-13T14:16:44 CST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XYZ]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Preference_dependencies -->
+      </class> <!-- Practies.AppiumFramework.ApiDemoAppTestCase -->
+      <class name="Practies.AppiumFramework.Ecommerce_Shopping_APP_tc">
+        <test-method status="PASS" signature="kiilALlNodes()[pri:0, instance:Practies.AppiumFramework.Ecommerce_Shopping_APP_tc@458c1321]" name="kiilALlNodes" is-config="true" duration-ms="18" started-at="2021-01-13T14:13:06 CST" finished-at="2021-01-13T14:13:06 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- kiilALlNodes -->
+        <test-method status="PASS" signature="testCase5()[pri:0, instance:Practies.AppiumFramework.Ecommerce_Shopping_APP_tc@458c1321]" name="testCase5" duration-ms="153539" started-at="2021-01-13T14:13:06 CST" finished-at="2021-01-13T14:15:40 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase5 -->
+        <test-method status="PASS" signature="closeEmulator()[pri:0, instance:Practies.AppiumFramework.Ecommerce_Shopping_APP_tc@458c1321]" name="closeEmulator" is-config="true" duration-ms="4" started-at="2021-01-13T14:16:44 CST" finished-at="2021-01-13T14:16:44 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeEmulator -->
+      </class> <!-- Practies.AppiumFramework.Ecommerce_Shopping_APP_tc -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

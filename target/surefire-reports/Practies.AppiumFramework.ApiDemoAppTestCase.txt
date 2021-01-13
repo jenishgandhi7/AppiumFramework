@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: Practies.AppiumFramework.ApiDemoAppTestCase
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 84.624 s <<< FAILURE! - in Practies.AppiumFramework.ApiDemoAppTestCase
+Practies.AppiumFramework.ApiDemoAppTestCase.APIDemoTC  Time elapsed: 83.836 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({By.id: android:id/edit})
+	at Practies.AppiumFramework.ApiDemoAppTestCase.APIDemoTC(ApiDemoAppTestCase.java:45)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@4a8a60bc (tried for 1 second(s) with 500 milliseconds interval)
+	at Practies.AppiumFramework.ApiDemoAppTestCase.APIDemoTC(ApiDemoAppTestCase.java:45)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.chained({By.id: android:id/edit})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-3NLNO6U', ip: '192.168.1.79', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+Driver info: driver.version: AndroidDriver
+	at Practies.AppiumFramework.ApiDemoAppTestCase.APIDemoTC(ApiDemoAppTestCase.java:45)
+

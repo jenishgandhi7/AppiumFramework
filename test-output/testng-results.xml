@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-01-12T18:33:11 CST" name="Suite" finished-at="2021-01-12T18:36:08 CST" duration-ms="176903">
+  <suite started-at="2021-01-13T00:22:31 CST" name="Suite" finished-at="2021-01-13T00:25:12 CST" duration-ms="161147">
     <groups>
     </groups>
-    <test started-at="2021-01-12T18:33:11 CST" name="Test" finished-at="2021-01-12T18:36:08 CST" duration-ms="176903">
+    <test started-at="2021-01-13T00:22:31 CST" name="Test" finished-at="2021-01-13T00:25:12 CST" duration-ms="161147">
       <class name="Practies.AppiumFramework.ApiDemoAppTestCase">
-        <test-method signature="APIDemoTC()[pri:0, instance:Practies.AppiumFramework.ApiDemoAppTestCase@3c407114]" started-at="2021-01-12T18:33:11 CST" name="APIDemoTC" finished-at="2021-01-12T18:34:08 CST" duration-ms="57296" status="FAIL">
+        <test-method signature="APIDemoTC()[pri:0, instance:Practies.AppiumFramework.ApiDemoAppTestCase@7714e963]" started-at="2021-01-13T00:24:12 CST" name="APIDemoTC" finished-at="2021-01-13T00:24:53 CST" duration-ms="40431" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- APIDemoTC -->
+        <test-method signature="Preference_dependencies(java.lang.String)[pri:0, instance:Practies.AppiumFramework.ApiDemoAppTestCase@7714e963]" started-at="2021-01-13T00:24:53 CST" name="Preference_dependencies" data-provider="input" finished-at="2021-01-13T00:24:58 CST" depends-on-methods="Practies.AppiumFramework.ApiDemoAppTestCase.APIDemoTC" duration-ms="4979" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[hello]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Preference_dependencies -->
+        <test-method signature="Preference_dependencies(java.lang.String)[pri:0, instance:Practies.AppiumFramework.ApiDemoAppTestCase@7714e963]" started-at="2021-01-13T00:24:58 CST" name="Preference_dependencies" data-provider="input" finished-at="2021-01-13T00:25:11 CST" depends-on-methods="Practies.AppiumFramework.ApiDemoAppTestCase.APIDemoTC" duration-ms="13303" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XYZ]]>
+              </value>
+            </param>
+          </params>
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[Can't locate an element by this strategy: By.chained({By.id: android:id/edit})]]>
@@ -17,7 +39,7 @@
 at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
 at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
 at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.sendKeys(<generated>)
-at Practies.AppiumFramework.ApiDemoAppTestCase.APIDemoTC(ApiDemoAppTestCase.java:43)
+at Practies.AppiumFramework.ApiDemoAppTestCase.Preference_dependencies(ApiDemoAppTestCase.java:59)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -46,7 +68,7 @@ at org.testng.TestNG.run(TestNG.java:1037)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@7072bc39 (tried for 1 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@6331250e (tried for 1 second(s) with 500 milliseconds interval)
 at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
@@ -77,30 +99,31 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- APIDemoTC -->
-      </class> <!-- Practies.AppiumFramework.ApiDemoAppTestCase -->
-      <class name="Practies.AppiumFramework.Ecommerce_Shopping_APP_tc">
-        <test-method signature="testCase5()[pri:0, instance:Practies.AppiumFramework.Ecommerce_Shopping_APP_tc@35ef1869]" started-at="2021-01-12T18:34:08 CST" name="testCase5" finished-at="2021-01-12T18:36:08 CST" duration-ms="119528" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testCase5 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Practies.AppiumFramework.Ecommerce_Shopping_APP_tc@35ef1869]" started-at="2021-01-12T18:36:08 CST" name="tearDown" finished-at="2021-01-12T18:36:08 CST" duration-ms="2" status="FAIL">
-          <exception class="java.lang.NullPointerException">
+        </test-method> <!-- Preference_dependencies -->
+        <test-method is-config="true" signature="stopServer(java.lang.String)[pri:0, instance:Practies.AppiumFramework.ApiDemoAppTestCase@7714e963]" started-at="2021-01-13T00:25:12 CST" name="stopServer" finished-at="1969-12-31T18:00:00 CST" duration-ms="-1610519112246" status="FAIL">
+          <exception class="org.testng.TestNGException">
             <message>
-              <![CDATA[Cannot invoke "io.appium.java_client.android.AndroidDriver.quit()" because "Practies.AppiumFramework.Ecommerce_Shopping_APP_tc.driver" is null]]>
+              <![CDATA[
+Can inject only one of <ITestContext, XmlTest> into a @AfterClass annotated stopServer.
+For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "io.appium.java_client.android.AndroidDriver.quit()" because "Practies.AppiumFramework.Ecommerce_Shopping_APP_tc.driver" is null
-at Practies.AppiumFramework.Ecommerce_Shopping_APP_tc.tearDown(Ecommerce_Shopping_APP_tc.java:160)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:61)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:366)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:320)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:351)
+              <![CDATA[org.testng.TestNGException: 
+Can inject only one of <ITestContext, XmlTest> into a @AfterClass annotated stopServer.
+For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
+at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:437)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:351)
+at org.testng.internal.Parameters.createParameters(Parameters.java:708)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
+at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:130)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
 at org.testng.SuiteRunner.run(SuiteRunner.java:286)
 at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
 at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
@@ -113,10 +136,24 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
+        </test-method> <!-- stopServer -->
+      </class> <!-- Practies.AppiumFramework.ApiDemoAppTestCase -->
+      <class name="Practies.AppiumFramework.Ecommerce_Shopping_APP_tc">
+        <test-method is-config="true" signature="kiilALlNodes()[pri:0, instance:Practies.AppiumFramework.Ecommerce_Shopping_APP_tc@1dde4cb2]" started-at="2021-01-13T00:22:31 CST" name="kiilALlNodes" finished-at="2021-01-13T00:22:31 CST" duration-ms="23" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- kiilALlNodes -->
+        <test-method signature="testCase5()[pri:0, instance:Practies.AppiumFramework.Ecommerce_Shopping_APP_tc@1dde4cb2]" started-at="2021-01-13T00:22:31 CST" name="testCase5" finished-at="2021-01-13T00:24:12 CST" duration-ms="101825" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase5 -->
+        <test-method is-config="true" signature="closeEmulator()[pri:0, instance:Practies.AppiumFramework.Ecommerce_Shopping_APP_tc@1dde4cb2]" started-at="2021-01-13T00:25:12 CST" name="closeEmulator" finished-at="2021-01-13T00:25:12 CST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeEmulator -->
       </class> <!-- Practies.AppiumFramework.Ecommerce_Shopping_APP_tc -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->

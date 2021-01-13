@@ -14,6 +14,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import Utilities.base_Utilities;
@@ -55,8 +56,10 @@ public class Ecommerce_Shopping_APP_tc extends base_class {
 
 		}
 	}
-	
-	
+	@BeforeTest
+	public static void kiilALlNodes() throws IOException {
+		Runtime.getRuntime().exec("taskkill /F /IM node.exe");
+	}
 
 
 	public static double getAmount(String value) {
@@ -152,9 +155,14 @@ public class Ecommerce_Shopping_APP_tc extends base_class {
 
 		driver.pressKey(new KeyEvent(AndroidKey.BACK));
 		driver.context("NATIVE_APP");
+		
 		base_Utilities.stopServer();
 
 	}
-
+	
+	@AfterSuite
+	public void closeEmulator() throws IOException{
+        Runtime.getRuntime().exec("adb -s emulator-5554 emu kill");
+	  }
 	
 }

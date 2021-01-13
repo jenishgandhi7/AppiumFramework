@@ -7,6 +7,9 @@ import java.net.ServerSocket;
 import java.net.URL;
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.appium.java_client.android.AndroidDriver;
@@ -42,16 +45,17 @@ public class base_class {
 		cap.setCapability("fullReset", false);
 		cap.setCapability("noReset", true);
 
-		String Device_name = (String) pro.get("deviceName");
-		
-		if(Device_name.equals("AppiumEmulator")) {
+		//String Device_name = (String) pro.get("deviceName");
+		String Device_name = System.getProperty("deviceName");
+	
+		if(Device_name.contains("Emulator")) {
 			cap.setCapability("avd",Device_name);
 			Thread.sleep(10000);
 			
 		}
 		
 		cap.setCapability(MobileCapabilityType.DEVICE_NAME, Device_name);
-		// cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
+		cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
 		// cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT,14);
 		cap.setCapability(MobileCapabilityType.APP, appFile.getAbsolutePath());
 	
@@ -59,6 +63,12 @@ public class base_class {
 		driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
 
 		return driver;
+	}
+	
+	
+	public static void getScreenshots(String testName) throws IOException {
+		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(scrFile,new File(System.getProperty("user.dir") + "\\src\\main\\java\\resources\\screenshot\\"+testName+".png"));
 	}
 	
 	
